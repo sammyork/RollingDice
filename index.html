@@ -1,0 +1,36 @@
+<!--
+    Samantha York, Section 86, Odd Pd 7/8 
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Document</title>
+   <style></style>
+   <script>
+    function initialize() {
+        randNumOutput = document.getElementById("rndnum");
+        randNum2 = document.getElementById("rndnum2");
+        total = document.getElementById("total");
+        generateRandomNumber();
+    }
+    function generateRandomNumber() {
+        rndNumber = Math.floor(Math.random() * (6) + 1 );
+        rndNumber2 = Math.floor(Math.random() * (6) + 1 );
+        sum = rndNumber + rndNumber2
+        display();
+    }
+    function display() {
+        randNumOutput.innerHTML = rndNumber;
+        randNum2.innerHTML = rndNumber2; 
+        total.innerHTML = sum;
+    }
+   </script>
+</head>
+<body onload="initialize();"> 
+    Dice 1: <span id = "rndnum">0</span><br>
+    Dice 2: <span id = "rndnum2">0</span><br>
+    Sum: <span id="total">0</span><br>
+    <button onclick = "generateRandomNumber();">generate a new random number</button>
+</body>
+</html>
